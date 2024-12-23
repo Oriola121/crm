@@ -1,7 +1,6 @@
 import { Camera, X } from "lucide-react";
 import { BsStars } from "react-icons/bs";
 import { PiPencil } from "react-icons/pi";
-import { LuSendHorizonal } from "react-icons/lu";
 import {
   Tabs,
   TabsContent,
@@ -9,6 +8,7 @@ import {
   TabsTrigger,
 } from "@crm/components/ui/tabs";
 import Research from "./research";
+import { TbSend2 } from "react-icons/tb";
 
 export default function FullInfo({ onClose }) {
   return (
@@ -48,7 +48,7 @@ export default function FullInfo({ onClose }) {
                 <PiPencil /> Edit
               </div>
               <div className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 px-2 py-1 text-white rounded-md shadow-md">
-                <LuSendHorizonal /> Approve and send
+                <TbSend2 /> Approve and send
               </div>
             </div>
           </div>
