@@ -13,7 +13,7 @@ import { TbSend2 } from "react-icons/tb";
 export default function FullInfo({ onClose }) {
   return (
     <div
-      className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center"
+      className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center"
       onClick={onClose}
     >
       <div
@@ -30,7 +30,11 @@ export default function FullInfo({ onClose }) {
 
         <div className="space-y-2">
           <div className="w-full p-2 border rounded-md shadow-lg flex items-center gap-2">
-            <img src="/uploads/jane.jpeg" className="rounded-full w-10 h-10" />
+            <img
+              src="/uploads/jane.jpeg"
+              className="rounded-full w-10 h-10"
+              alt="Jane"
+            />
             <div>
               <h1 className="font-semibold">Jane Reyes</h1>
               <p className="text-sm text-gray-600">COO, Northwind Traders</p>
@@ -52,31 +56,33 @@ export default function FullInfo({ onClose }) {
               </div>
             </div>
           </div>
-          <Tabs>
-            <Tabs defaultValue="Engage">
-              <TabsList className="flex justify-start w-full bg-transparent cursor-pointer bg-white shadow-md rounded-md py-4">
-                <div className="w-[30%] flex justify-around">
-                  <TabsTrigger
-                    value="Engage"
-                    className="text-xs cursor-pointer border-b-2 border-transparent data-[state=active]:border-blue-500 -mb-[10px] relative"
-                  >
-                    Engage
-                  </TabsTrigger>
-                  <TabsTrigger
-                    value="Research"
-                    className="text-xs cursor-pointer border-b-2 border-transparent data-[state=active]:border-blue-500 -mb-[10px] relative"
-                  >
-                    Research
-                  </TabsTrigger>
-                </div>
-              </TabsList>
+          <div className="w-full bg-blue-100/10 py-2 px-1 rounded-md">
+            <Tabs>
+              <Tabs defaultValue="Engage">
+                <TabsList className="flex justify-start w-full bg-transparent cursor-pointer bg-white shadow-md rounded-md py-4">
+                  <div className="w-[30%] flex justify-around">
+                    <TabsTrigger
+                      value="Engage"
+                      className="text-xs cursor-pointer border-b-2 border-transparent data-[state=active]:border-blue-500 -mb-[10px] relative"
+                    >
+                      Engage
+                    </TabsTrigger>
+                    <TabsTrigger
+                      value="Research"
+                      className="text-xs cursor-pointer border-b-2 border-transparent data-[state=active]:border-blue-500 -mb-[10px] relative"
+                    >
+                      Research
+                    </TabsTrigger>
+                  </div>
+                </TabsList>
 
-              <TabsContent value="Engage"></TabsContent>
-              <TabsContent value="Research">
-                <Research />
-              </TabsContent>
+                <TabsContent value="Engage"></TabsContent>
+                <TabsContent value="Research">
+                  <Research />
+                </TabsContent>
+              </Tabs>
             </Tabs>
-          </Tabs>
+          </div>
         </div>
       </div>
     </div>

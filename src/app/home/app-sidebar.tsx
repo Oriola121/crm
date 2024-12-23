@@ -24,6 +24,8 @@ import {
   Menu,
   X,
 } from "lucide-react";
+import { MdSupportAgent } from "react-icons/md";
+
 import { cn } from "@crm/lib/utils";
 import { ScrollArea } from "@crm/components/ui/scroll-area";
 import { PiPhone } from "react-icons/pi";
@@ -146,6 +148,12 @@ export default function AppSidebar() {
               icon={Home}
               label="Home"
               href="/home"
+              closeSidebar={toggleSidebar}
+            />
+            <MenuItem
+              icon={MdSupportAgent}
+              label="Agent Skill"
+              href="/home/agent-skill"
               closeSidebar={toggleSidebar}
             />
             <MenuItem

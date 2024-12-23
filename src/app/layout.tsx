@@ -5,6 +5,7 @@ import localFont from "next/font/local";
 import { ThemeProvider } from "@crm/components";
 import { Toaster } from "@crm/components/ui/toaster";
 import { cn } from "@crm/lib/utils";
+import NextTopLoader from "nextjs-toploader";
 
 const mtn = localFont({
   src: [
@@ -49,6 +50,7 @@ export default function RootLayout({
           enableSystem={true}
           disableTransitionOnChange
         >
+          <NextTopLoader color="#2563EB" />
           {children}
           <Toaster />
         </ThemeProvider>
